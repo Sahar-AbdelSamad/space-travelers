@@ -1,5 +1,5 @@
-const MyProfile = () => {
+const Profile = () => {
 
 };
 
-export default MyProfile;
+export default Profile;
