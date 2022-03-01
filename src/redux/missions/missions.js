@@ -1,32 +1,50 @@
-const FETCH_MISSIONS = 'space-travelers/missions/FETCH_MISSIONS';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const initialState = [];
+const MISSIONS_API_URL = 'https://api.spacexdata.com/v3/missions';
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case FETCH_MISSIONS:
-      return ([...action.payload]);
-    default:
-      return state;
-  }
+const initialState = {
+  isFetching: false,
+  data: [],
+  error: {},
 };
 
-export default reducer;
+export const getMissions = createAsyncThunk(
+  'redux/missions/missions.js',
+  async () => {
+    const response = await axios.get(MISSIONS_API_URL).catch((error) => error);
+    const data = [];
 
-export const fetchDataMission = (payload) => ({
-  type: FETCH_MISSIONS,
-  payload,
+    response.data.forEach((obj) => {
+      const {
+        missionId, missionName, description,
+      } = obj;
+
+      const formatedData = {
+        missionId,
+        missionName,
+        description,
+      };
+
+      data.push(formatedData);
+    });
+
+    return data;
+  },
+);
+
+const missionsSlice = createSlice({
+  name: 'user',
+  initialState,
+  reducers: {},
+  extraReducers: {
+    [getMissions.pending.type]: (state) => ({ ...state, isFetching: true }),
+    [getMissions.fulfilled.type]: (state, action) => (
+      {
+        ...state, isFetching: false, data: action.payload, error: {},
+      }),
+    [getMissions.rejected.type]: (state) => ({ ...state, isFetching: false, error: {} }),
+  },
 });
 
-export const fetchData = () => async (dispatch) => {
-  const response = await fetch('https://api.spacexdata.com/v3/missions');
-  const data = await response.json();
-  const info = Object.entries(data).map(([key, value]) => ({
-    mission_id: key,
-    mission_name: value.mission_name,
-    description: value.description,
-    flickr_images: value.flickr_images[0],
-    reserved: false,
-  }));
-  dispatch(fetchDataMission(info));
-};
+export default missionsSlice.reducer;
