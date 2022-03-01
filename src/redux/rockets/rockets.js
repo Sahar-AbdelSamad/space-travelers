@@ -1,5 +1,6 @@
 const FETCH_SUCCESS = 'space-travelers/rockets/FETCH_SUCCESS';
-const RESERVE_STATUS = 'space-travelers/rockets/RESERVE_STATUS';
+const RESERVE_ROCKET = 'space-travelers/rockets/RESERVE_ROCKET';
+const CANCEL_RESERVATION = 'space-travelers/rockets/CANCEL_RESERVATION';
 
 const initialState = [];
 
@@ -7,10 +8,17 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_SUCCESS:
       return ([...action.payload]);
-    case RESERVE_STATUS: {
+    case RESERVE_ROCKET: {
       const newState = state.map((rocket) => {
         if (rocket.id !== action.payload) return rocket;
-        return { ...rocket, reserved: !rocket.reserved };
+        return { ...rocket, reserved: true };
+      });
+      return [...newState];
+    }
+    case CANCEL_RESERVATION: {
+      const newState = state.map((rocket) => {
+        if (rocket.id !== action.payload) return rocket;
+        return { ...rocket, reserved: false };
       });
       return [...newState];
     }
@@ -26,8 +34,13 @@ export const fetchDataSuccess = (payload) => ({
   payload,
 });
 
-export const reserveStatus = (payload) => ({
-  type: RESERVE_STATUS,
+export const reserveRocket = (payload) => ({
+  type: RESERVE_ROCKET,
+  payload,
+});
+
+export const cancelReservation = (payload) => ({
+  type: CANCEL_RESERVATION,
   payload,
 });
 
