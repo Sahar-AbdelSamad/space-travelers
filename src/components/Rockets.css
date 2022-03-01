@@ -1,19 +1,35 @@
 .rockets {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 20px;
-  width: 90%;
-  margin: 20px auto;
+  width: 95%;
+  margin: 10px auto 0;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .flex {
   display: flex;
   gap: 1%;
+  flex-direction: column;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  border-radius: 6%;
+  width: 250px;
+  height: 410px;
 }
 
 .img {
-  width: 38%;
-  height: 35%;
+  height: 40%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.rocket-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .rocket-info p {
@@ -46,4 +62,34 @@
   background-color: white;
   color: rgb(116, 115, 115);
   border: 1px solid rgb(116, 115, 115);
+}
+
+@media screen and (min-width: 992px) {
+  .rockets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    width: 100%;
+    height: 160px;
+    border-radius: 2%;
+  }
+
+  .img {
+    width: 38%;
+    height: 160px;
+    border-radius: 0%;
+  }
+
+  .rocket-info {
+    align-items: flex-start;
+    margin: 0;
+  }
 }

@@ -1,6 +1,121 @@
-.fantastic-logo {
-  background-image: url(../assets/logo.png);
-  background-size: cover;
-  width: 50px;
-  height: 50px;
+/* .nav {
+  position: relative;
+} */
+
+.nav button {
+  position: fixed;
+  left: 20px;
+  top: 10px;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: rgb(1, 102, 255);
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+}
+
+.nav-link a {
+  display: block;
+  padding: 10px 40px;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menuNav li:first-child {
+  margin-top: 7rem;
+}
+
+.fantastic-logo,
+.logo,
+.desktop-nav {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .fantastic-logo,
+  .logo,
+  .desktop-nav {
+    display: block;
+  }
+
+  .mobile-nav,
+  .nav button {
+    display: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+
+  .logo {
+    color: black;
+    padding-left: 10px;
+    font-size: 1.5rem;
+  }
+
+  .fantastic-logo {
+    background-image: url(../assets/logo.png);
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .navBar {
+    display: flex;
+  }
+
+  .nav-link {
+    list-style-type: none;
+  }
+
+  .nav-link a {
+    text-decoration: none;
+    color: #0330fa;
+    font-size: 0.8rem;
+    text-transform: none;
+    padding: 0;
+    margin: 0 10px;
+  }
+
+  a:first-child {
+    display: flex;
+  }
+
+  .nav-link a.active {
+    border-bottom: 1px solid #0330fa;
+  }
+
+  .missions {
+    border-right: 1px solid rgba(0, 0, 0, 0.301);
+  }
 }
