@@ -1,5 +1,7 @@
 import React from 'react';
-import { Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Routes, Route,
+} from 'react-router-dom';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Profile from './components/MyProfile';
