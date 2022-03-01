@@ -1,0 +1,49 @@
+.rockets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.flex {
+  display: flex;
+  gap: 1%;
+}
+
+.img {
+  width: 38%;
+  height: 35%;
+}
+
+.rocket-info p {
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 5%;
+}
+
+.span {
+  background-color: #039ffa;
+  color: white;
+  border: none;
+  padding: 0.5px 3px;
+  font-size: small;
+  border-radius: 5%;
+  margin-right: 10px;
+}
+
+.btn-reserve {
+  background-color: #0362fa;
+  color: white;
+  border: none;
+}
+
+.btn-cancel-reservation {
+  background-color: white;
+  color: rgb(116, 115, 115);
+  border: 1px solid rgb(116, 115, 115);
+}
