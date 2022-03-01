@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 const Header = () => (
   <header className="header">
-  {/* <Link to="/" className="profile"><img src="../assets/logo.png" alt="fantastic-logo"/></Link> */}
-    <Link to="/" style={{ textDecoration: 'none' }}><h1 className="logo">Space Travelers' Hub</h1></Link>
+    {/* <Link to="/" className="profile"><img src="../assets/logo.png" alt="fantastic-logo"/>
+    </Link> */}
+    <Link to="/" style={{ textDecoration: 'none' }}><h1 className="logo">Space Travelers&apos; Hub</h1></Link>
     <nav className="nav">
       <ul className="navBar">
         <li className="nav-link books">
