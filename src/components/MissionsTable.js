@@ -35,4 +35,5 @@ const MissionsTable = () => {
     </div>
   );
 };
+
 export default MissionsTable;
