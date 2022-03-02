@@ -1,10 +1,10 @@
 import React from 'react';
-import MissionsTable from './MissionsTable';
+import MissionList from './MissionList';
 
 const Missions = () => (
   <div>
     <h3>Missions</h3>
-    <MissionsTable />
+    <MissionList />
   </div>
 );
 
