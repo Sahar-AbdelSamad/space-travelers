@@ -1,9 +1,14 @@
-import { v4 as uuidv4 } from 'uuid';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import MissionList from './MissionList';
+import { fetchDataMissions } from '../redux/missions/missions';
 
 const MissionsTable = () => {
-  const missions = useSelector((state) => state.missions.data);
+  const missions = useSelector((state) => state.missionsReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchDataMissions());
+  }, []);
 
   return (
     <div>
@@ -18,7 +23,8 @@ const MissionsTable = () => {
           {
             missions.map((mission) => (
               <MissionList
-                key={uuidv4()}
+                key={mission.mission_id}
+                id={mission.mission_id}
                 missionName={mission.mission_name}
                 description={mission.description}
               />
@@ -29,5 +35,4 @@ const MissionsTable = () => {
     </div>
   );
 };
-
 export default MissionsTable;
