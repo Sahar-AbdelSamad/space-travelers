@@ -1,7 +1,23 @@
-const MissionsList = () => (
-  <div>
-    <h1>PAGE UNDER CONSTRUCTION</h1>
-  </div>
-);
+import { PropTypes } from 'prop-types';
 
-export default MissionsList;
+const MissionList = (props) => {
+  const {
+    missionName, description,
+  } = props;
+
+  return (
+    <tr>
+      <td className="fs-5 fw-bold">{missionName}</td>
+      <td>{description}</td>
+      <td className="badge rounded-pill bg-secondary text-light">NOT A MEMBER</td>
+      <td><button className="btn btn-outline-secondary" type="button">Join Mission</button></td>
+    </tr>
+  );
+};
+
+MissionList.propTypes = {
+  missionName: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
+export default MissionList;
