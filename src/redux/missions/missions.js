@@ -1,50 +1,30 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+const FETCH_SUCCESS = 'space-travelers/missions/FETCH_SUCCESS';
 
-const MISSIONS_API_URL = 'https://api.spacexdata.com/v3/missions';
+const initialState = [];
 
-const initialState = {
-  isFetching: false,
-  data: [],
-  error: {},
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_SUCCESS:
+      return (action.payload);
+    default:
+      return state;
+  }
 };
 
-export const getMissions = createAsyncThunk(
-  'redux/missions/missions.js',
-  async () => {
-    const response = await axios.get(MISSIONS_API_URL).catch((error) => error);
-    const data = [];
+export default reducer;
 
-    response.data.forEach((obj) => {
-      const {
-        missionId, missionName, description,
-      } = obj;
-
-      const formatedData = {
-        missionId,
-        missionName,
-        description,
-      };
-
-      data.push(formatedData);
-    });
-
-    return data;
-  },
-);
-
-const missionsSlice = createSlice({
-  name: 'user',
-  initialState,
-  reducers: {},
-  extraReducers: {
-    [getMissions.pending.type]: (state) => ({ ...state, isFetching: true }),
-    [getMissions.fulfilled.type]: (state, action) => (
-      {
-        ...state, isFetching: false, data: action.payload, error: {},
-      }),
-    [getMissions.rejected.type]: (state) => ({ ...state, isFetching: false, error: {} }),
-  },
+export const fetchDataMissionsSuccess = (payload) => ({
+  type: FETCH_SUCCESS,
+  payload,
 });
 
-export default missionsSlice.reducer;
+export const fetchDataMissions = () => async (dispatch) => {
+  const response = await fetch('https://api.spacexdata.com/v3/missions');
+  const data = await response.json();
+  const info = Object.entries(data).map(([key, value]) => ({
+    mission_id: key,
+    mission_name: value.mission_name,
+    description: value.description,
+  }));
+  dispatch(fetchDataMissionsSuccess(info));
+};

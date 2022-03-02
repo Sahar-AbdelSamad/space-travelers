@@ -15,7 +15,7 @@ const Header = () => {
         <div className="fantastic-logo" />
         <h1 className="logo">Space Travelers&apos; Hub</h1>
       </NavLink>
-      <nav className="nav mobile-nav">
+      <nav className="navig mobile-navig">
         <button type="button" onClick={() => dispatch(handleToggle(menu.visibleMobileMenu))}>
           {menu.visibleMobileMenu ? (
             <MdClose style={{ color: '#fff', width: '40px', height: '40px' }} />
@@ -50,7 +50,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <nav className="nav desktop-nav">
+      <nav className="navig desktop-navig">
         <ul className="navBar">
           <li className="nav-link">
             <NavLink

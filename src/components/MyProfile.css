@@ -1,13 +1,107 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.missions-profile,
+.rockets-profile {
+  width: 90%;
+  margin: auto;
+}
+
+.rockets-profile h1 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.profile-table {
+  width: 100%;
+  margin: 0;
+}
+
+.res-rocket {
+  padding: 8px 8px 16px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  border-color: rgba(0, 0, 0, 0.301);
+}
+
 table {
-  width: 50%;
+  width: 95%;
+  margin: 40px auto 15px;
+}
+
+th {
+  padding: 5px;
+  font-size: 0.7rem;
 }
 
 table,
 td {
   border: 1px solid black;
   border-collapse: collapse;
+  font-size: 0.8rem;
+  line-height: 1;
 }
 
 td {
   padding: 5px;
+}
+
+th,
+td:first-of-type {
+  font-weight: bold;
+  width: 10%;
+  font-size: 0.8rem;
+}
+
+td:nth-child(2) {
+  width: 50%;
+}
+
+td:nth-child(3) {
+  width: 5%;
+  text-align: center;
+}
+
+td:nth-child(4) {
+  width: 14%;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .profile {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .missions-profile,
+  .rockets-profile {
+    width: 40%;
+  }
+
+  table {
+    width: 88%;
+    margin-top: 15px;
+  }
+
+  th {
+    font-size: 0.9rem;
+  }
+
+  table,
+  td {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  th,
+  td:first-of-type {
+    font-weight: bold;
+    width: 10%;
+    font-size: 0.9rem;
+  }
 }

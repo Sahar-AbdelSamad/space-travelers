@@ -9,7 +9,7 @@ const Rockets = () => {
   return (
     <section className="rockets">
       {rockets.map((item) => (
-        <div className="flex" key={item.id}>
+        <div className="items" key={item.id}>
           <img className="img" src={item.flickr_images} alt="rocket" />
           <div className="rocket-info">
             <h2>{item.rocket_name}</h2>
@@ -19,8 +19,8 @@ const Rockets = () => {
                 {rockets[0].description}
               </p>
             ) : <p>{rockets[0].description}</p>}
-            { (item.reserved) ? <button className="btn btn-cancel-reservation" type="button" onClick={() => dispatch(cancelReservation(item.id))}>Cancel Reservation</button>
-              : <button className="btn btn-reserve" type="button" onClick={() => dispatch(reserveRocket(item.id))}>Reserve Rocket</button>}
+            { (item.reserved) ? <button className="button button-cancel-reservation" type="button" onClick={() => dispatch(cancelReservation(item.id))}>Cancel Reservation</button>
+              : <button className="button button-reserve" type="button" onClick={() => dispatch(reserveRocket(item.id))}>Reserve Rocket</button>}
           </div>
         </div>
       ))}
