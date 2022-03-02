@@ -6,15 +6,15 @@ const Profile = () => {
   const rocket = rockets.filter((item) => (item.reserved === true));
 
   return (
-    <>
-      <section className="mission">Profile</section>
-      <section className="rockets">
+    <div className="profile">
+      <section className="missions-profile">Missions</section>
+      <section className="rockets-profile">
         <h1>My Rockets</h1>
-        <table>
+        <table className="profile-table">
           {rocket.map((rocket) => (
             <tbody key={rocket.id}>
               <tr>
-                <td>
+                <td className="res-rocket">
                   {rocket.rocket_name}
                 </td>
               </tr>
@@ -22,7 +22,7 @@ const Profile = () => {
           ))}
         </table>
       </section>
-    </>
+    </div>
   );
 };
 
