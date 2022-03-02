@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { FiMenu } from 'react-icons/fi';
 import { MdClose } from 'react-icons/md';
+import { handleToggle } from '../redux/mobileMenu/mobileMenu';
 import './Header.css';
 
 const Header = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  const handleToggle = () => {
-    setNavbarOpen(!navbarOpen);
-  };
-  const closeMenu = () => {
-    setNavbarOpen(false);
-  };
+  const menu = useSelector((state) => state.mobileMenuReducer);
+  const dispatch = useDispatch();
   return (
     <header className="header">
       <NavLink to="/">
@@ -19,20 +16,18 @@ const Header = () => {
         <h1 className="logo">Space Travelers&apos; Hub</h1>
       </NavLink>
       <nav className="nav mobile-nav">
-        <button type="button" onClick={handleToggle}>
-          {navbarOpen ? (
+        <button type="button" onClick={() => dispatch(handleToggle(menu.visibleMobileMenu))}>
+          {menu.visibleMobileMenu ? (
             <MdClose style={{ color: '#fff', width: '40px', height: '40px' }} />
           ) : (
             <FiMenu style={{ color: '#7b7b7b', width: '40px', height: '40px' }} />
           )}
         </button>
-        <ul className={`menuNav ${navbarOpen ? ' showMenu navBar' : 'navBar'}`}>
+        <ul className={`menuNav ${menu.visibleMobileMenu ? ' showMenu navBar' : 'navBar'}`}>
           <li className="nav-link">
             <NavLink
               to="/"
-              activeClassName="active-link"
-              onClick={() => closeMenu()}
-              exact
+              onClick={() => dispatch(handleToggle(menu.visibleMobileMenu))}
             >
               Rockets
             </NavLink>
@@ -40,9 +35,7 @@ const Header = () => {
           <li className="nav-link missions">
             <NavLink
               to="missions"
-              activeClassName="active-link"
-              onClick={() => closeMenu()}
-              exact
+              onClick={() => dispatch(handleToggle(menu.visibleMobileMenu))}
             >
               Missions
             </NavLink>
@@ -50,9 +43,7 @@ const Header = () => {
           <li className="nav-link">
             <NavLink
               to="myProfile"
-              activeClassName="active-link"
-              onClick={() => closeMenu()}
-              exact
+              onClick={() => dispatch(handleToggle(menu.visibleMobileMenu))}
             >
               My Profile
             </NavLink>
