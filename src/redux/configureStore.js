@@ -3,11 +3,10 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rocketsReducer, { fetchData } from './rockets/rockets';
-import mobileMenuReducer from './mobileMenu/mobileMenu';
 import missionsReducer from './missions/missions';
 
 const reducer = combineReducers({
-  rocketsReducer, mobileMenuReducer, missionsReducer,
+  rocketsReducer, missionsReducer,
 });
 
 const store = createStore(
