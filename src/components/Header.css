@@ -12,6 +12,10 @@
   border: none;
 }
 
+.navBar {
+  padding-left: 0;
+}
+
 .menuNav {
   overflow-y: scroll;
   list-style: none;
