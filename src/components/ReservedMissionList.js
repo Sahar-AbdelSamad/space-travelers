@@ -3,14 +3,12 @@ import { v4 as uuidv4 } from 'uuid';
 import ReservedMissions from './ReserveMission';
 
 const ReservedMissionsList = () => {
-  const missions = useSelector((state) => state.missions);
-  const reserved = missions.data.filter((missions) => missions.reserved);
+  const missions = useSelector((state) => state.missionsReducer);
+  const reserved = missions.filter((missions) => missions.reserved);
 
   return (
     <>
-      { reserved.length === 0
-      && <p>&emsp; Join a Mission First</p> }
-      <table className="table table-bordered rounded">
+      <table className="profile-table">
         <tbody>
           {
           reserved.map((mission) => (
@@ -18,7 +16,6 @@ const ReservedMissionsList = () => {
               key={uuidv4()}
               missionName={mission.mission_name}
               missionId={mission.mission_id}
-              wikipedia={mission.wikipedia}
             />
           ))
         }
