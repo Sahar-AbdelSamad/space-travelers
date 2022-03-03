@@ -20,6 +20,18 @@
   margin: 0;
 }
 
+td {
+  padding: 5px;
+}
+
+table,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
 .res-rocket td {
   padding: 8px;
   font-size: 0.8rem;
@@ -45,18 +57,6 @@ table {
 th {
   padding: 5px;
   font-size: 0.7rem;
-}
-
-td {
-  padding: 5px;
-}
-
-table,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  font-size: 0.8rem;
-  line-height: 1;
 }
 
 th,
