@@ -33,7 +33,7 @@ To run the test just use the following command!
 
 ```bash
 $ npm run test
-
+```
 
 ## Built With
 
