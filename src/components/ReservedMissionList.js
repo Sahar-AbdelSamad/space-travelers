@@ -9,7 +9,7 @@ const ReservedMissionsList = () => {
   return (
     <>
       { reserved.length === 0
-      && <p >&emsp; Join a Mission First</p>}
+      && <p >&emsp; Join a Mission First</p> }
       <table className="table table-bordered rounded">
         <tbody>
           {

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import ReservedMissionsList from './ReservedMissionList';
+import ReservedMissionsList from './ReservedMissionList'
 import './MyProfile.css';
 
 const Profile = () => {
@@ -9,7 +9,7 @@ const Profile = () => {
   return (
     <>
       <section className="mission">
-      <h2>My Missions</h2>
+        <h2>My Missions</h2>
         <ReservedMissionsList />
       </section>
       <section className="rockets">
