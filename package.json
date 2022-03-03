@@ -22,10 +22,6 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
     "uuid": "^8.3.2",
-<<<<<<< HEAD
-    "uuidv4": "^6.2.12",
-=======
->>>>>>> 13ba9479d4fbab7ceeb738a3e825b3fbacbf2439
     "web-vitals": "^2.1.4"
   },
   "scripts": {

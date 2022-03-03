@@ -5,21 +5,12 @@
   margin-top: 40px;
 }
 
-<<<<<<< HEAD
-.missions-profile,
-.rockets-profile {
-=======
 .section-profile {
->>>>>>> 13ba9479d4fbab7ceeb738a3e825b3fbacbf2439
   width: 90%;
   margin: auto;
 }
 
-<<<<<<< HEAD
-.rockets-profile h1 {
-=======
 .section-profile h2 {
->>>>>>> 13ba9479d4fbab7ceeb738a3e825b3fbacbf2439
   margin-top: 15px;
   font-size: 1.2rem;
 }
@@ -78,8 +69,6 @@ td:nth-child(4) {
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 td:nth-child(4) .leave-mission {
   color: red;
   border-color: red;
@@ -89,7 +78,6 @@ button:focus {
   box-shadow: 0 0 0 0 !important;
 }
 
->>>>>>> 13ba9479d4fbab7ceeb738a3e825b3fbacbf2439
 @media screen and (min-width: 992px) {
   .profile {
     display: flex;
@@ -97,12 +85,7 @@ button:focus {
     margin-top: 0;
   }
 
-<<<<<<< HEAD
-  .missions-profile,
-  .rockets-profile {
-=======
   .section-profile {
->>>>>>> 13ba9479d4fbab7ceeb738a3e825b3fbacbf2439
     width: 40%;
   }
 
