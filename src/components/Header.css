@@ -103,10 +103,13 @@
 
   .navBar {
     display: flex;
+    margin: 0;
+    align-items: center;
   }
 
   .nav-link {
     list-style-type: none;
+    padding: 0 !important;
   }
 
   .nav-link a {
@@ -115,7 +118,7 @@
     font-size: 0.9rem;
     text-transform: none;
     padding: 0;
-    margin: 0 10px;
+    margin: 0 20px;
     width: auto;
   }
 
@@ -125,6 +128,10 @@
 
   a:first-child {
     display: flex;
+  }
+
+  a:first-child:hover {
+    text-decoration: none;
   }
 
   .missions {

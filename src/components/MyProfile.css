@@ -5,13 +5,12 @@
   margin-top: 40px;
 }
 
-.missions-profile,
-.rockets-profile {
+.section-profile {
   width: 90%;
   margin: auto;
 }
 
-.rockets-profile h1 {
+.section-profile h2 {
   margin-top: 15px;
   font-size: 1.2rem;
 }
@@ -62,13 +61,21 @@ td:nth-child(2) {
 }
 
 td:nth-child(3) {
-  width: 5%;
   text-align: center;
 }
 
 td:nth-child(4) {
   width: 14%;
   text-align: center;
+}
+
+td:nth-child(4) .leave-mission {
+  color: red;
+  border-color: red;
+}
+
+button:focus {
+  box-shadow: 0 0 0 0 !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -78,8 +85,7 @@ td:nth-child(4) {
     margin-top: 0;
   }
 
-  .missions-profile,
-  .rockets-profile {
+  .section-profile {
     width: 40%;
   }
 
