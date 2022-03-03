@@ -47,16 +47,16 @@ th {
   font-size: 0.7rem;
 }
 
+td {
+  padding: 5px;
+}
+
 table,
 td {
   border: 1px solid black;
   border-collapse: collapse;
   font-size: 0.8rem;
   line-height: 1;
-}
-
-td {
-  padding: 5px;
 }
 
 th,
