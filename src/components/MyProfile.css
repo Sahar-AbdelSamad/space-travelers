@@ -1,0 +1,123 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.section-profile {
+  width: 90%;
+  margin: auto;
+}
+
+.section-profile h2 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.profile-table {
+  width: 100%;
+  margin: 0;
+}
+
+td {
+  padding: 5px;
+}
+
+table,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.res-rocket td {
+  padding: 8px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  border-color: rgba(0, 0, 0, 0.301);
+}
+
+.td:nth-child(1) {
+  width: 40%;
+}
+
+.td:nth-child(2),
+.td:nth-child(3) {
+  width: 32%;
+  text-align: center;
+}
+
+table {
+  width: 95%;
+  margin: 40px auto 15px;
+}
+
+th {
+  padding: 5px;
+  font-size: 0.7rem;
+}
+
+th,
+td:first-of-type {
+  font-weight: bold;
+  width: 10%;
+  font-size: 0.8rem;
+}
+
+td:nth-child(2) {
+  width: 50%;
+}
+
+td:nth-child(3) {
+  text-align: center;
+}
+
+td:nth-child(4) {
+  width: 14%;
+  text-align: center;
+}
+
+td:nth-child(4) .leave-mission {
+  color: red;
+  border-color: red;
+}
+
+button:focus {
+  box-shadow: 0 0 0 0 !important;
+}
+
+@media screen and (min-width: 992px) {
+  .profile {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .section-profile {
+    width: 40%;
+  }
+
+  table {
+    width: 88%;
+    margin-top: 15px;
+  }
+
+  th {
+    font-size: 0.9rem;
+  }
+
+  table,
+  td {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+  th,
+  td:first-of-type {
+    font-weight: bold;
+    width: 10%;
+    font-size: 0.9rem;
+  }
+}

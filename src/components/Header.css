@@ -1,0 +1,150 @@
+.navig {
+  position: relative;
+}
+
+.navig button {
+  position: fixed;
+  left: 20px;
+  top: 10px;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.navBar {
+  padding-left: 0;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: rgb(1, 103, 255);
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 320px;
+  z-index: 9;
+  padding-left: 0;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+}
+
+.nav-link a {
+  display: block;
+  padding: 10px 0;
+  margin: 0 40px;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-link a:hover {
+  text-decoration: none;
+}
+
+.nav-link a.active {
+  border-bottom: 2px solid #4d03fa;
+}
+
+.menuNav li:first-child {
+  margin-top: 5rem;
+}
+
+.fantastic-logo,
+.logo,
+.desktop-navig {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .fantastic-logo,
+  .logo,
+  .desktop-navig {
+    display: block;
+  }
+
+  .mobile-nav,
+  .navig button {
+    display: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none !important;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+
+  .logo {
+    color: black;
+    padding-left: 10px;
+    font-size: 1.5rem;
+  }
+
+  .fantastic-logo {
+    background-image: url(../assets/logo.png);
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .navBar {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .nav-link {
+    list-style-type: none;
+    padding: 0 !important;
+  }
+
+  .nav-link a {
+    text-decoration: none;
+    color: #0330fa;
+    font-size: 0.9rem;
+    text-transform: none;
+    padding: 0;
+    margin: 0 20px;
+    width: auto;
+  }
+
+  .nav-link a.active {
+    border-bottom: 1px solid #0330fa;
+  }
+
+  a:first-child {
+    display: flex;
+  }
+
+  a:first-child:hover {
+    text-decoration: none;
+  }
+
+  .missions {
+    border-right: 1px solid rgba(0, 0, 0, 0.301);
+  }
+}
