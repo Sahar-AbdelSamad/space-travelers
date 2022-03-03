@@ -20,13 +20,6 @@
   margin: 0;
 }
 
-.res-rocket td {
-  padding: 8px;
-  font-size: 0.8rem;
-  font-weight: normal;
-  border-color: rgba(0, 0, 0, 0.301);
-}
-
 .td:nth-child(1) {
   width: 40%;
 }
@@ -47,16 +40,23 @@ th {
   font-size: 0.7rem;
 }
 
-td {
-  padding: 5px;
-}
-
 table,
 td {
   border: 1px solid black;
   border-collapse: collapse;
   font-size: 0.8rem;
   line-height: 1;
+}
+
+td {
+  padding: 5px;
+}
+
+.res-rocket td {
+  padding: 8px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  border-color: rgba(0, 0, 0, 0.301);
 }
 
 th,
