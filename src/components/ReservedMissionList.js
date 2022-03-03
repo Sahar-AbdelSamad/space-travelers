@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import ReservedMissions from './ReserveMission';
 
 const ReservedMissionsList = () => {
@@ -8,14 +7,16 @@ const ReservedMissionsList = () => {
 
   return (
     <>
+      {!(reserved.length > 0) && <p>no missions joined</p>}
       <table className="profile-table">
         <tbody>
           {
           reserved.map((mission) => (
             <ReservedMissions
-              key={uuidv4()}
-              missionName={mission.mission_name}
+              key={mission.mission_id}
               missionId={mission.mission_id}
+              missionName={mission.mission_name}
+              wikipedia={mission.wikipedia}
             />
           ))
         }

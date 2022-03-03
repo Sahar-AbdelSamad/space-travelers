@@ -20,11 +20,14 @@
   margin: 0;
 }
 
-.res-rocket {
-  padding: 8px 8px 16px;
-  font-size: 0.8rem;
-  font-weight: normal;
-  border-color: rgba(0, 0, 0, 0.301);
+.td:nth-child(1) {
+  width: 40%;
+}
+
+.td:nth-child(2),
+.td:nth-child(3) {
+  width: 32%;
+  text-align: center;
 }
 
 table {
@@ -47,6 +50,13 @@ td {
 
 td {
   padding: 5px;
+}
+
+.res-rocket td {
+  padding: 8px;
+  font-size: 0.8rem;
+  font-weight: normal;
+  border-color: rgba(0, 0, 0, 0.301);
 }
 
 th,
