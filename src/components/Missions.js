@@ -3,7 +3,6 @@ import MissionsTable from './MissionsTable';
 
 const Missions = () => (
   <div>
-    <h3>Missions</h3>
     <MissionsTable />
   </div>
 );

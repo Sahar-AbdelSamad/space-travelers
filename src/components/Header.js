@@ -50,7 +50,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <nav className="nav desktop-nav">
+      <nav className="navig desktop-navig">
         <ul className="navBar">
           <li className="nav-link">
             <NavLink

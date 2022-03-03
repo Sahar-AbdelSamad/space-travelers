@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import ReservedMissionsList from './ReservedMissionList';
 import './MyProfile.css';
+import ReservedMissionsList from './ReservedMissionList';
 
 const Profile = () => {
   const rockets = useSelector((state) => state.rocketsReducer.filter((item) => item.reserved));

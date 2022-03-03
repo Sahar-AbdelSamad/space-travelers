@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<tr
+  className="res-rocket"
+>
+  <td
+    className="td"
+  />
+  <td
+    className="td"
+  >
+    <button
+      className="button button-reserve"
+      onClick={[Function]}
+      type="button"
+    >
+      Leave Mission
+    </button>
+  </td>
+  <td
+    className="td"
+  >
+    <button
+      className="button button-reserve"
+      onClick={[Function]}
+      type="button"
+    >
+      Read More
+    </button>
+  </td>
+</tr>
+`;
