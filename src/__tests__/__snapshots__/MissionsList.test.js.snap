@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<tr>
+  <td
+    className="fs-5 fw-bold"
+  />
+  <td />
+  <td>
+    <span
+      className="badge squared-pill bg-secondary text-light"
+    >
+      NOT A MEMBER
+    </span>
+  </td>
+  <td>
+    <button
+      className="btn btn-outline-secondary"
+      onClick={[Function]}
+      type="button"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;

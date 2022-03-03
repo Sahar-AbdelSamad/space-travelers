@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<header
+  className="header"
+>
+  <a
+    aria-current="page"
+    className="active"
+    href="/"
+    onClick={[Function]}
+  >
+    <div
+      className="fantastic-logo"
+    />
+    <h1
+      className="logo"
+    >
+      Space Travelers' Hub
+    </h1>
+  </a>
+  <nav
+    className="navig mobile-navig"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": "#7b7b7b",
+            "height": "40px",
+            "width": "40px",
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="3"
+          x2="21"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="3"
+          x2="21"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </button>
+    <ul
+      className="menuNav navBar"
+    >
+      <li
+        className="nav-link"
+      >
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        className="nav-link missions"
+      >
+        <a
+          className=""
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        className="nav-link"
+      >
+        <a
+          className=""
+          href="/myProfile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav
+    className="navig desktop-navig"
+  >
+    <ul
+      className="navBar"
+    >
+      <li
+        className="nav-link"
+      >
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        className="nav-link missions"
+      >
+        <a
+          className=""
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        className="nav-link"
+      >
+        <a
+          className=""
+          href="/myProfile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
