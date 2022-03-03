@@ -1,20 +1,23 @@
 import { useSelector } from 'react-redux';
+import ReservedMissionsList from './ReservedMissionList';
 import './MyProfile.css';
 
 const Profile = () => {
-  const rockets = useSelector((state) => state.rocketsReducer);
-  const rocket = rockets.filter((item) => (item.reserved === true));
+  const rockets = useSelector((state) => state.rocketsReducer.filter((item) => item.reserved));
 
   return (
-    <>
-      <section className="mission">Profile</section>
-      <section className="rockets">
-        <h1>My Rockets</h1>
-        <table>
-          {rocket.map((rocket) => (
+    <div className="profile">
+      <section className="section-profile">
+        <h2>My Missions</h2>
+        <ReservedMissionsList />
+      </section>
+      <section className="section-profile">
+        <h2>My Rockets</h2>
+        <table className="profile-table">
+          {rockets.map((rocket) => (
             <tbody key={rocket.id}>
               <tr>
-                <td>
+                <td className="res-rocket">
                   {rocket.rocket_name}
                 </td>
               </tr>
@@ -22,7 +25,7 @@ const Profile = () => {
           ))}
         </table>
       </section>
-    </>
+    </div>
   );
 };
 

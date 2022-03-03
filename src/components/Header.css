@@ -1,8 +1,8 @@
-.nav {
+.navig {
   position: relative;
 }
 
-.nav button {
+.navig button {
   position: fixed;
   left: 20px;
   top: 10px;
@@ -43,6 +43,10 @@
   font-weight: bold;
 }
 
+.nav-link a:hover {
+  text-decoration: none;
+}
+
 .nav-link a.active {
   border-bottom: 2px solid #4d03fa;
 }
@@ -53,19 +57,19 @@
 
 .fantastic-logo,
 .logo,
-.desktop-nav {
+.desktop-navig {
   display: none;
 }
 
 @media screen and (min-width: 992px) {
   .fantastic-logo,
   .logo,
-  .desktop-nav {
+  .desktop-navig {
     display: block;
   }
 
   .mobile-nav,
-  .nav button {
+  .navig button {
     display: none;
   }
 
@@ -99,19 +103,22 @@
 
   .navBar {
     display: flex;
+    margin: 0;
+    align-items: center;
   }
 
   .nav-link {
     list-style-type: none;
+    padding: 0 !important;
   }
 
   .nav-link a {
     text-decoration: none;
     color: #0330fa;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-transform: none;
     padding: 0;
-    margin: 0 10px;
+    margin: 0 20px;
     width: auto;
   }
 
@@ -121,6 +128,10 @@
 
   a:first-child {
     display: flex;
+  }
+
+  a:first-child:hover {
+    text-decoration: none;
   }
 
   .missions {
