@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import ReservedMissionsList from './ReservedMissionList'
+import ReservedMissionsList from './ReservedMissionList';
 import './MyProfile.css';
 
 const Profile = () => {

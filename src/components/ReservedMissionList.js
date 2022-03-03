@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import ReservedMissions from './ReservedMissions';
+import ReservedMissions from './ReserveMission';
 
 const ReservedMissionsList = () => {
   const missions = useSelector((state) => state.missions);
@@ -9,7 +9,7 @@ const ReservedMissionsList = () => {
   return (
     <>
       { reserved.length === 0
-      && <p >&emsp; Join a Mission First</p> }
+      && <p>&emsp; Join a Mission First</p> }
       <table className="table table-bordered rounded">
         <tbody>
           {
