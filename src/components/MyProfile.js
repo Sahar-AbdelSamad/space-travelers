@@ -23,7 +23,7 @@ const Profile = () => {
                   {rocket.rocket_name}
                 </td>
                 <td className="td">
-                  <button type="button" className="button button-reserve" onClick={() => dispatch(cancelReservation(rocket.id))}>Leave Mission</button>
+                  <button type="button" className="button button-reserve" onClick={() => dispatch(cancelReservation(rocket.id))}>Cancel Reservation</button>
                 </td>
                 <td className="td">
                   <button type="button" className="button button-reserve" onClick={() => window.open(rocket.wikipedia)}>Read More</button>
