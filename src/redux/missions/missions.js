@@ -51,6 +51,7 @@ export const fetchDataMissions = () => async (dispatch) => {
     mission_name: value.mission_name,
     description: value.description,
     reserved: false,
+    wikipedia: value.wikipedia,
   }));
   dispatch(fetchDataMissionsSuccess(info));
 };
