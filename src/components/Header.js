@@ -16,7 +16,7 @@ const Header = () => {
         <h1 className="logo">Space Travelers&apos; Hub</h1>
       </NavLink>
       <nav className="nav mobile-nav">
-        <button type="button" onClick={() => dispatch(handleToggle(menu.visibleMobileMenu))}>
+        <button type="button" className="burger" onClick={() => dispatch(handleToggle(menu.visibleMobileMenu))}>
           {menu.visibleMobileMenu ? (
             <MdClose style={{ color: '#fff', width: '40px', height: '40px' }} />
           ) : (

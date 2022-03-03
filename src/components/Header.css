@@ -23,8 +23,9 @@
   height: 100vh;
   width: 0;
   overflow: hidden;
-  max-width: 290px;
+  max-width: 320px;
   z-index: 9;
+  padding-left: 0;
 }
 
 .menuNav.showMenu {
@@ -106,7 +107,11 @@
     margin: 0;
     align-items: center;
   }
-
+  
+  .burger {
+    display: none;
+  }
+  
   .nav-link {
     list-style-type: none;
     padding: 0 !important;
