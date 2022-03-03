@@ -53,6 +53,7 @@ export const fetchData = () => async (dispatch) => {
     description: value.description,
     flickr_images: value.flickr_images[0],
     reserved: false,
+    wikipedia: value.wikipedia,
   }));
   dispatch(fetchDataSuccess(info));
 };
