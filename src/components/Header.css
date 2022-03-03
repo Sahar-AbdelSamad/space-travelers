@@ -107,11 +107,11 @@
     margin: 0;
     align-items: center;
   }
-  
+
   .burger {
     display: none;
   }
-  
+
   .nav-link {
     list-style-type: none;
     padding: 0 !important;
