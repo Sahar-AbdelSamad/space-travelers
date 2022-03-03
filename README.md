@@ -27,6 +27,13 @@ $ cd space-travelers
 $ npm install
 $ npm run start
 ```
+### Run tests
+
+To run the test just use the following command!
+
+```bash
+$ npm run test
+
 
 ## Built With
 
