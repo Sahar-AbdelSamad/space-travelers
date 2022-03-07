@@ -1,3 +1,12 @@
+/* stylelint-disable csstree/validator */
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .navig {
   position: relative;
 }
@@ -84,8 +93,14 @@
   }
 
   .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 0, 0.301);
     width: 90%;
@@ -107,8 +122,12 @@
   }
 
   .navBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding-left: 0;
   }
@@ -137,6 +156,8 @@
   }
 
   a:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
