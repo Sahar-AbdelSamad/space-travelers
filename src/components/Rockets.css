@@ -1,33 +1,66 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* stylelint-disable csstree/validator */
+
 .rockets {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 20px;
   width: 95%;
   margin: 40px auto 0;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 1%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   padding: 15px;
   border-radius: 6%;
-  width: 250px;
-  height: 480px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
 }
 
 .img {
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
-  height: 40%;
+  height: 200px;
 }
 
 .rocket-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 10px;
   height: 50%;
@@ -66,17 +99,39 @@
   border: 1px solid rgb(116, 115, 115);
 }
 
+@media screen and (min-width: 768px) {
+  .rockets {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .items {
+    width: 350px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .rockets {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin: 20px auto;
   }
 
   .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     gap: 1%;
     width: 100%;
@@ -91,6 +146,8 @@
   }
 
   .rocket-info {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     margin: 0;
   }

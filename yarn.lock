@@ -6920,6 +6920,8 @@
     "stylelint-config-recommended" "^4.0.0"
 
 "stylelint-csstree-validator@^1.9.0":
+  "integrity" "sha512-fVbtWDEWzux/bZSPBk9tD/bvyc8bSmb52BvUDjcduOzXqKqOyFHUvFayVr9ic88l8KJEVV0Ujab9ah5oTdX4Uw=="
+  "resolved" "https://registry.npmjs.org/stylelint-csstree-validator/-/stylelint-csstree-validator-1.9.0.tgz"
   "version" "1.9.0"
   dependencies:
     "css-tree" "^1.0.0"
